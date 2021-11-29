@@ -1,0 +1,11 @@
+{
+  "headers": {
+  },
+  "body": "",
+  "pathParameters":{
+    "url":"www.terra.com.br",
+    "id":"122222",
+    "origin_type" : "email",
+    "origin_value" : "user@terra.com.br"
+  }
+}

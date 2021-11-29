@@ -1,0 +1,8 @@
+{
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"customer_id\": \"1111111\",\"destination\": \"LP\",\"origin_type\": \"phone\",\"origin_value\": \"996898914\",\"action_type\": \"CLICK\"    }",
+  "pathParameters":{
+  }
+}

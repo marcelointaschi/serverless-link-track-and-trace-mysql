@@ -1,0 +1,19 @@
+image: node:14-alpine
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          script:
+            - export ENDPOINT=${ENDPOINT}
+            - export DATABASE=${DATABASE}
+            - export USERNAME=${USERNAME}
+            - export PASSWORD=${PASSWORD}
+            - echo $DATABASE
+            - apk add python3
+            - npm install
+            - npm install -g serverless
+            - serverless config credentials --stage dev --provider aws --key ${AWS_DEV_LAMBDA_KEY} --secret ${AWS_DEV_LAMBDA_SECRET}
+            - serverless deploy
